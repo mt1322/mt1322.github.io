@@ -4,6 +4,29 @@
     <!-- manifest.jsonを呼び出しています -->
     <link rel="manifest" href="./manifest.json">
     <script>
+function test() {
+    navigator.geolocation.getCurrentPosition(test2);
+}
+
+function test2(position) {
+
+    var geo_text = "緯度:" + position.coords.latitude + "\n";
+    geo_text += "経度:" + position.coords.longitude + "\n";
+    geo_text += "高度:" + position.coords.altitude + "\n";
+    geo_text += "位置精度:" + position.coords.accuracy + "\n";
+    geo_text += "高度精度:" + position.coords.altitudeAccuracy  + "\n";
+    geo_text += "移動方向:" + position.coords.heading + "\n";
+    geo_text += "速度:" + position.coords.speed + "\n";
+
+    var date = new Date(position.timestamp);
+
+    geo_text += "取得時刻:" + date.toLocaleString() + "\n";
+
+    alert(geo_text);
+
+}
+</script>
+    <script>
     // service workerが有効なら、service-worker.js を登録します
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
@@ -27,5 +50,6 @@
 <h1>Hello PWA.</h1>
 <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
 <a href="p.html">p.html</a>
+<button onclick="test()">test</button>
 </body>
 </html>
