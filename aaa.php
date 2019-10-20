@@ -56,13 +56,13 @@ fclose($csv);
 
 <body>
 郵便番号を入力してください。(例：1234567)
-<form action="bbb.html" method="post">
+<form action="bbb.php" method="post">
 <input type="text" id="textbox" name="user">
 <input type="submit" value="確定">
 <input type="button" value="ランダム生成" onclick="randomGen()">
 </form>
 住所か地名を入力してください。(例：東京都墨田区押上１丁目１−２　or　東京スカイツリー)
-<form action="bbb.html" method="post">
+<form action="bbb.php" method="post">
 <input type="text" name="user2">
 <input type="submit" value="確定">
 </body>

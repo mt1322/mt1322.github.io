@@ -1,0 +1,22 @@
+- キーワード
+  - XMLHttpRequest(jsonファイルなどをサーバー上に置いておく)
+  - WebAPIを利用してGoogleMapなどを読み込む
+  - Glide
+  - CalcApp
+
+- 第1回
+  - PWAを触ってみる
+  - 参考：https://qiita.com/umamichi/items/0e2b4b1c578e7335ba20
+  - Github.io
+    - ユーザ名.github.ioでHTTP通信可能なページを作成できる
+  - manifest.json(WebExtension APIを使う拡張機能に必要なファイル)
+  - service-worker.js(オフラインでも動作する)
+  - index.htmlから上記2つのファイルを呼び出す
+  - github.ioのページでindex.htmlが動作する
+  - スマホのホーム画面に追加できる
+
+- 第2回
+  - html, jsを書いてみる
+  - マスに数字を入力するボタンの作成
+  - canvasで画像の上に数字を出力
+  - 数字を入力するたびに前の状態を削除し，新たに数字を表示

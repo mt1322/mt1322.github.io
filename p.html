@@ -15,9 +15,40 @@
     }
   </style>
 </head>
-<body>
+<body onload="init()">
+<script>
+    var con;
+    function init(){
+        var canvas = document.getElementById('stage');
+        con = canvas.getContext('2d');
+        con.font = "bold 24px sans-serif";
+        con.drawImage(masu, 100, 100, 500, 500);
+    }
+    function show(value){
+        con.clearRect(120,190,30,30);
+        //document.getElementById('num').innerHTML = value
+        con.fillText(value, 130, 215, 500);
+    }
+</script>
 <h1>p.html</h1>
-<img src="./p-chan.jpg" alt="p-chan" class="image" />
+<!--<img src="./p-chan.jpg" alt="p-chan" class="image" /> -->
+<table align="center">
+    <tr>
+        <td><button value="1" onclick="show(value)">1</button></td> <td><button value="2" onclick="show(value)">2</button></td> <td><button value="3" onclick="show(value)">3</button></td>
+    </tr>
+    <tr>
+        <td><button value="4" onclick="show(value)">4</button></td> <td><button value="5" onclick="show(value)">5</button></td> <td><button value="6" onclick="show(value)">6</button></td>
+    </tr>
+    <tr>
+        <td><button value="7" onclick="show(value)">7</button></td> <td><button value="8" onclick="show(value)">8</button></td> <td><button value="9" onclick="show(value)">9</button></td>
+    </tr>
+
+</table>
 <a href="index.html">index.html</a>
+<canvas id="stage" width="1200" height="1200"></canvas>
+<p>
+    <span id="num"></span>
+</p>
+<img id="masu" src="masu.png" onclick="input()" style="display:none" />
 </body>
 </html>
